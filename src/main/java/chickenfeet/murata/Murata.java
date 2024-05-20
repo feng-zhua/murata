@@ -1,14 +1,18 @@
 package chickenfeet.murata;
 
-import chickenfeet.murata.commands.Sum;
+import chickenfeet.murata.embeds.RuleEmbed;
 import net.dv8tion.jda.api.JDA;
 import net.dv8tion.jda.api.JDABuilder;
 
+import javax.security.auth.login.LoginException;
+
 public class Murata {
-    public static void main(String[] args) throws InterruptedException {
-        JDA api = JDABuilder.createDefault(System.getenv("BOT_TOKEN"))
-                .addEventListeners(new MurataListener())
-                .addEventListeners(new Sum())
-                .build().awaitReady();
+    public static void main(String[] args) throws LoginException {
+        JDA api = JDABuilder.createDefault(System.getenv("BOT_TOKEN")).build();
+        api.addEventListener(new MurataListener());
+        CommandManager manager = new CommandManager();
+        manager.add(new RuleEmbed());
+        api.addEventListener(manager);
+
     }
 }
