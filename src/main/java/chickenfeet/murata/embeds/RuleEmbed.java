@@ -1,41 +1,17 @@
 package chickenfeet.murata.embeds;
 
-import chickenfeet.murata.ICommand;
 import net.dv8tion.jda.api.EmbedBuilder;
-import net.dv8tion.jda.api.events.interaction.command.SlashCommandInteractionEvent;
-import net.dv8tion.jda.api.interactions.commands.build.OptionData;
 import java.awt.*;
 import java.time.OffsetDateTime;
 import java.time.format.DateTimeFormatter;
-import java.util.List;
 
-public class RuleEmbed implements ICommand {
-
-    @Override
-    public String getName() {
-        return "rules";
-    }
-
-    @Override
-    public String getDescription() {
-        return "Displays the server rules.";
-    }
-
-    @Override
-    public List<OptionData> getOptions() {
-        return null;
-    }
-
-    @Override
-    public void execute(SlashCommandInteractionEvent event) {
-        event.replyEmbeds(createRulesEmbed().build()).queue();
-    }
+public class RuleEmbed {
 
     public static EmbedBuilder createRulesEmbed() {
         EmbedBuilder embed = new EmbedBuilder();
 
         embed.setTitle("<:6545primogem:1242079091902124043>" +  " Server Rules");
-        embed.setColor(new Color(255, 69, 0)); // Light pink color for aesthetic
+        embed.setColor(new Color(255, 69, 0));
         embed.setDescription("Welcome to the Natlan Discord server! Please adhere to the following rules to ensure a pleasant experience for everyone:");
 
         embed.addField("<:5585pyrosigil:1242079070326489088>" + "**General Conduct**",
