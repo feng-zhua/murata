@@ -11,14 +11,18 @@ import net.dv8tion.jda.api.events.session.ReadyEvent;
 import net.dv8tion.jda.api.hooks.ListenerAdapter;
 import org.jetbrains.annotations.NotNull;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.AbstractMap.SimpleEntry;
-import java.util.Map;
 import java.util.Map.Entry;
 
 public class MurataListener extends ListenerAdapter {
 
-    private static final List<Emoji> REACTIONS = List.of(
+    /**
+     * CHECK THIS CHANGED LIST TO ARRAYS
+     * **/
+    private static final Arrays REACTIONS = (Arrays) Arrays.asList(
             Emoji.fromUnicode("🔥"),
             Emoji.fromUnicode("💧"),
             Emoji.fromUnicode("🌱"),
@@ -56,6 +60,10 @@ public class MurataListener extends ListenerAdapter {
         }
     }
 
+
+    /**
+     * CHECK THIS CHANGED LIST TO ARRAYS
+     * **/
     private void sendRoleEmbeds(Guild server) {
         TextChannel reactRoleChannel = server.getChannelById(TextChannel.class, "1241889063422922833");
         if (reactRoleChannel != null) {
@@ -75,7 +83,7 @@ public class MurataListener extends ListenerAdapter {
                     }
                 }
             });*/
-            List<Entry<EmbedBuilder, List<Emoji>>> embedsWithReactions = List.of(
+            List<SimpleEntry<EmbedBuilder, Arrays>> embedsWithReactions = Arrays.asList(
                     new SimpleEntry<>(ReactRoleEmbed.createPingRoleEmbed(), REACTIONS),
                     new SimpleEntry<>(ReactRoleEmbed.createPronounRoleEmbed(), REACTIONS),
                     new SimpleEntry<>(ReactRoleEmbed.createAgeRoleEmbed(), REACTIONS),
@@ -83,8 +91,8 @@ public class MurataListener extends ListenerAdapter {
                     new SimpleEntry<>(ReactRoleEmbed.createCoopRoleEmbed(), REACTIONS)
             );
 
-            for (Entry<EmbedBuilder, List<Emoji>> entry : embedsWithReactions) {
-                sendEmbedWithReactions(reactRoleChannel, entry.getKey(), entry.getValue());
+            for (SimpleEntry<EmbedBuilder, Arrays> entry : embedsWithReactions) {
+                sendEmbedWithReactions(reactRoleChannel, entry.getKey(), (List<Emoji>) entry.getValue());
             }
         }
     }
