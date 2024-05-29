@@ -19,65 +19,65 @@ public class ReactRoleEmbed {
     public static EmbedBuilder createPingRoleEmbed() {
         EmbedBuilder pingEmbed = new EmbedBuilder();
         pingEmbed.setTitle("Pings");
-        pingEmbed.setColor(new Color(0, 153, 255)); // Light blue color for aesthetic
-        pingEmbed.setDescription("React with the corresponding emoji to get the role:");
-        pingEmbed.addField("🔥 Server Announcements", "React with 🔥 to get the Pyro role", false);
-        pingEmbed.addField("💧 Events", "React with 💧 to get the Hydro role", false);
-        pingEmbed.addField("🌱 Giveaways", "React with 🌱 to get the Dendro role", false);
-        pingEmbed.addField("🌬️ Primogems", "React with 🌬️ to get the Anemo role", false);
-        pingEmbed.addField("⚡ Genshin Updates", "React with ⚡ to get the Electro role", false);
-        pingEmbed.addField("❄️ Leaks", "React with ❄️ to get the Cryo role", false);
+        pingEmbed.setColor(new Color(186, 0, 0));
+        pingEmbed.setDescription("");
+        pingEmbed.addField("<:9909intertwinedfate:1242079125577924648>", "Server Announcements", false);
+        pingEmbed.addField("<:6997acquaintfate:1242079124013580311>", "Events", false);
+        pingEmbed.addField("<:4611genesiscrystal:1242079127117496381>", "Giveaways", false);
+        pingEmbed.addField("<:6545primogem:1242079091902124043>", "Primogems", false);
+        pingEmbed.addField("<:3981fragileresin:1242079194486280222>", "Genshin Updates", false);
+        pingEmbed.addField("<:pyrocons:1245375886895743076>", "Leaks", false);
         return pingEmbed;
     }
 
     public static EmbedBuilder createPronounRoleEmbed() {
         EmbedBuilder pronounEmbed = new EmbedBuilder();
         pronounEmbed.setTitle("Pronouns");
-        pronounEmbed.setColor(new Color(0, 153, 255)); // Light blue color for aesthetic
-        pronounEmbed.setDescription("React with the corresponding emoji to get the role:");
-        pronounEmbed.addField("🔥 She/Her", "React with 🔥 to get the Pyro role", false);
-        pronounEmbed.addField("💧 He/Him", "React with 💧 to get the Hydro role", false);
-        pronounEmbed.addField("🌱 They/Them", "React with 🌱 to get the Dendro role", false);
-        pronounEmbed.addField("🌬️ Ask Pronouns", "React with 🌬️ to get the Anemo role", false);
-        pronounEmbed.addField("⚡ Any Pronouns", "React with ⚡ to get the Electro role", false);
-        pronounEmbed.addField("❄️ Neo Pronouns", "React with ❄️ to get the Cryo role", false);
+        pronounEmbed.setColor(new Color(186, 0, 0));
+        pronounEmbed.setDescription("");
+        pronounEmbed.addField("<:6920pastelrednumberone:1245467132033241098>", "She/Her", false);
+        pronounEmbed.addField("<:7833pastelrednumbertwo:1245467130753847447>", "He/Him", false);
+        pronounEmbed.addField("<:7283pastelrednumberthree:1245467129021730919>", "They/Them", false);
+        pronounEmbed.addField("<:7283pastelrednumberfour:1245467127821898000>", "Ask Pronouns", false);
+        pronounEmbed.addField("<:9437pastelrednumberfive:1245467125968011294>", "Any Pronouns", false);
+        pronounEmbed.addField("<:2052pastelrednumbersix:1245467124672233542>", " Neo Pronouns", false);
         return pronounEmbed;
     }
 
     public static EmbedBuilder createAgeRoleEmbed() {
         EmbedBuilder ageEmbed = new EmbedBuilder();
         ageEmbed.setTitle("Age");
-        ageEmbed.setColor(new Color(0, 153, 255)); // Light blue color for aesthetic
-        ageEmbed.setDescription("React with the corresponding emoji to get the role:");
-        ageEmbed.addField("🔥 -18 ", "React with 🔥 to get the Pyro role", false);
-        ageEmbed.addField("💧 +18 ", "React with 💧 to get the Hydro role", false);
+        ageEmbed.setColor(new Color(186, 0, 0));
+        ageEmbed.setDescription("");
+        ageEmbed.addField("<:6920pastelrednumberone:1245467132033241098>", "-18 ", false);
+        ageEmbed.addField("<:7833pastelrednumbertwo:1245467130753847447>", "+18", false);
         return ageEmbed;
     }
 
     public static EmbedBuilder createVisionRoleEmbed() {
         EmbedBuilder visionEmbed = new EmbedBuilder();
         visionEmbed.setTitle("Vision");
-        visionEmbed.setColor(new Color(0, 153, 255)); // Light blue color for aesthetic
-        visionEmbed.setDescription("React with the corresponding emoji to get the role:");
-        visionEmbed.addField("🔥 Pyro", "React with 🔥 to get the Pyro role", false);
-        visionEmbed.addField("💧 Hydro", "React with 💧 to get the Hydro role", false);
-        visionEmbed.addField("🌱 Dendro", "React with 🌱 to get the Dendro role", false);
-        visionEmbed.addField("🌬️ Anemo", "React with 🌬️ to get the Anemo role", false);
-        visionEmbed.addField("⚡ Electro", "React with ⚡ to get the Electro role", false);
-        visionEmbed.addField("❄️ Cryo", "React with ❄️ to get the Cryo role", false);
-        visionEmbed.addField("🪨 Geo", "React with 🪨 to get the Geo role", false);
+        visionEmbed.setColor(new Color(186, 0, 0));
+        visionEmbed.setDescription("");
+        visionEmbed.addField("<:5585pyrosigil:1242079070326489088>", "Pyro", false);
+        visionEmbed.addField("<:4378hydrosigil:1245461976352690299>", "Hydro", false);
+        visionEmbed.addField("<:7452dendrosigil:1245461919020617778>", "Dendro", false);
+        visionEmbed.addField("<:8230anemosigil:1245461974867775659>", "Anemo", false);
+        visionEmbed.addField("<:5286electrosigil:1245461972045271111>", "Electro", false);
+        visionEmbed.addField("<:8305cryosigil:1245461970447237242>", "Cryo", false);
+        visionEmbed.addField("<:4471geosigil:1245461973379055699>", "Geo", false);
         return visionEmbed;
     }
 
     public static EmbedBuilder createCoopRoleEmbed() {
         EmbedBuilder coopRoleEmbed = new EmbedBuilder();
         coopRoleEmbed.setTitle("CO-OP");
-        coopRoleEmbed.setColor(new Color(0, 153, 255)); // Light blue color for aesthetic
+        coopRoleEmbed.setColor(new Color(186, 0, 0));
         coopRoleEmbed.setDescription("React with the corresponding emoji to get the role:");
-        coopRoleEmbed.addField("🔥 EU", "React with 🔥 to get the Pyro role", false);
-        coopRoleEmbed.addField("💧 NA", "React with 💧 to get the Hydro role", false);
-        coopRoleEmbed.addField("🌱 ASIA", "React with 🌱 to get the Dendro role", false);
-        coopRoleEmbed.addField("🌬️ TW/HK/MO", "React with 🌬️ to get the Anemo role", false);
+        coopRoleEmbed.addField("<:6920pastelrednumberone:1245467132033241098>", "EU", false);
+        coopRoleEmbed.addField("<:7833pastelrednumbertwo:1245467130753847447>", "NA", false);
+        coopRoleEmbed.addField("<:7283pastelrednumberthree:1245467129021730919>", "ASIA", false);
+        coopRoleEmbed.addField("<:7283pastelrednumberfour:1245467127821898000>", "TW/HK/MO", false);
         return coopRoleEmbed;
     }
 

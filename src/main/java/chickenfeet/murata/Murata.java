@@ -9,7 +9,8 @@ import javax.security.auth.login.LoginException;
 
 public class Murata {
     public static void main(String[] args) throws LoginException {
-        JDA api = JDABuilder.createDefault(System.getenv("BOT_TOKEN")).build();
+        String token = System.getenv("BOT_TOKEN");
+        JDA api = JDABuilder.createDefault(token).build();
         api.addEventListener(new MurataListener());
         api.addEventListener(new RoleReactListener());
 

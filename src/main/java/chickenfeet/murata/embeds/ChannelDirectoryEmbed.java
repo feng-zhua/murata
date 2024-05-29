@@ -13,7 +13,7 @@ public class ChannelDirectoryEmbed {
     public static EmbedBuilder allChannelembed() {
         EmbedBuilder pingEmbed = new EmbedBuilder();
         pingEmbed.setTitle("Channels");
-        pingEmbed.setColor(new Color(0, 153, 255));
+        pingEmbed.setColor(new Color(186, 0, 0));
         pingEmbed.setDescription("Channels");
         pingEmbed.addField("Owner", "channel", false);
         pingEmbed.addField("Owner", "channel", false);
