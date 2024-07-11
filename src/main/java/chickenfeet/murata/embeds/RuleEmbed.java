@@ -20,7 +20,6 @@ public class RuleEmbed {
                         "• No hate speech or harassment.\n" +
                         "• Follow Discord's [Terms of Service](https://discord.com/terms) and [Guidelines](https://discord.com/guidelines)\n" +
                         "• No self-promotion or advertising without permission.\n" +
-                        "• No alternate accounts allowed.\n" +
                         "• No spam or excessive messages.\n" +
                         "• NSWF content is strictly prohibited.\n", false);
 
@@ -47,6 +46,34 @@ public class RuleEmbed {
         return embed;
     }
 
+    public static EmbedBuilder createModEmbed() {
+        EmbedBuilder mod = new EmbedBuilder();
+        mod.setTitle("<:6545primogem:1242079091902124043>" + " Our Moderation System");
+        mod.setColor(new Color(255, 69, 0)); // Red color for emphasis
+        mod.setDescription("Make sure to read through this to understand our Moderation System:");
+
+        mod.addField("<:5585pyrosigil:1242079070326489088>" + "**Discord AutoMod System**",
+                "• We use Discord's official AutoMod System.\n" +
+                        "• If you spam mention over 10 roles or users within one message it will get blocked and our Staff team will be alerted.\n" +
+                        "• If your messages are suspected of being generic spam your message will be blocked and our Staff team will be alerted.\n" +
+                        "• If your messages are triggering the automod profanity filter your message will be blocked and our Staff team will be alerted.\n" +
+                        "• If the system detects any bad words in your messages your message will be deleted and you will be timed out.\n", false);
+
+        mod.addField("<:5585pyrosigil:1242079070326489088>" + "**Wick Bot Mod System**",
+                "• We also use the Wick Bot's System.\n" +
+                        "• We use Wick to verify new members, there is no other way to access our server without verification. Contact Staff if you have trouble with this.\n" +
+                        "• For every spam message you will be timed out.\n" +
+                        "• For every malicious link you will be warned.\n" +
+                        "• For every nsfw link you will be immediately kicked.\n" +
+                        "• We use the Wick bot together with the bad words we have registered in the Discord Auto Mod, you will be warned and timed out when used.\n" +
+                        "• Auto Ban.\n", false);
+
+        mod.addField("<:5585pyrosigil:1242079070326489088>" + "**Staff**",
+                "• Staff can and will warn, mute, kick or ban you if you go against our Rules.\n", false);
+
+        return mod;
+    }
+
     public static EmbedBuilder createConsequencesEmbed() {
         EmbedBuilder embed = new EmbedBuilder();
         embed.setTitle("<:6545primogem:1242079091902124043>" + " Consequences");
@@ -55,14 +82,15 @@ public class RuleEmbed {
 
         embed.addField("<:5585pyrosigil:1242079070326489088>" + "**Warnings**",
                 "• Breaking rules will result in warnings.\n" +
-                        "• Accumulate three warnings, and you will be banned.\n", false);
+                        "• The base of our Wick Bot Warning points is 5. " +
+                        "Accumulate 25 points, and you will be kicked.\n", false);
 
         embed.addField("<:5585pyrosigil:1242079070326489088>" + "**Immediate Bans**",
                 "• Severe infractions can result in an immediate ban.\n" +
                         "• This includes hate speech or sharing explicit content.\n", false);
 
         embed.addField("<:5585pyrosigil:1242079070326489088>" + "**Appeals**",
-                "• If you believe you were wrongly warned or banned, contact modmail to appeal.\n", false);
+                "• If you believe you were wrongly warned or kicked, contact modmail to appeal.\n", false);
 
         OffsetDateTime now = OffsetDateTime.now();
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
